@@ -1,3 +1,6 @@
+//Breno Valentim Bernardo
+// 21/10/2024
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
@@ -23,7 +26,7 @@ float SubtraiNumeros(){
     scanf("%f",  &a);
     printf("Digite o segundo numero: ");
     scanf("%f",  &b);
-    printf("SubtraÁ„o: %f\n", subtracao = a - b);
+    printf("Subtra√ß√£o: %f\n", subtracao = a - b);
 
     system("pause");
     system("cls");
@@ -37,7 +40,7 @@ float  MultiplicaNumeros(){
     scanf("%f",  &a);
     printf("Digite o segundo numero: ");
     scanf("%f",  &b);
-    printf("MultiplicaÁ„o: %f\n", multiplicacao = a * b);
+    printf("Multiplica√ß√£o: %f\n", multiplicacao = a * b);
 
     system("pause");
     system("cls");
@@ -51,7 +54,7 @@ float DivideNumeros(){
     scanf("%f",  &a);
     printf("Digite o segundo numero: ");
     scanf("%f",  &b);
-    printf("Divis„o: %f\n", divisao = a / b);
+    printf("Divis√£o: %f\n", divisao = a / b);
 
     system("pause");
     system("cls");
@@ -63,7 +66,7 @@ float RaizQuadrada(){
     float a, raiz = 0;
     printf("Digite o numero: ");
     scanf("%f",  &a);
-    printf("Raiz quadrada de %d È: %f\n", a, raiz = sqrt(a));
+    printf("Raiz quadrada de %d √©: %f\n", a, raiz = sqrt(a));
 
     system("pause");
     system("cls");
@@ -75,15 +78,15 @@ float Porcentagem(){
     float a, porcentagem = 0, valor = 0;
     int op = 0;
 
-    printf("O que quer fazer?\n1 - Saber a porcentagem de algum n˙mero\n2 - Saber o valor decimal de uma porcentagem\n");
+    printf("O que quer fazer?\n1 - Saber a porcentagem de algum n√∫mero\n2 - Saber o valor decimal de uma porcentagem\n");
     scanf("%d",  &op);
     switch (op){
         case 1:
-            printf("Digite o n˙mero: ");
+            printf("Digite o n√∫mero: ");
             scanf("%f",  &a);
             printf("Qual a porcentagem? ");
             scanf("%f", &porcentagem);
-            printf("O valor da porcentagem È: %f\n", valor = a * (porcentagem/100));
+            printf("O valor da porcentagem √©: %f\n", valor = a * (porcentagem/100));
             
             system("pause");
             system("cls");
@@ -93,7 +96,7 @@ float Porcentagem(){
         case 2:
             printf("Qual a porcentagem? ");
             scanf("%f", &porcentagem);
-            printf("O valor da porcentagem È: %f\n", valor = porcentagem/100);
+            printf("O valor da porcentagem √©: %f\n", valor = porcentagem/100);
 
             system("pause");
             system("cls");
@@ -101,7 +104,7 @@ float Porcentagem(){
             return valor;
         break;
         default:
-            printf("OpÁ„o invalida\n");
+            printf("Op√ß√£o invalida\n");
             system("pause");
             system("cls");
 
@@ -117,14 +120,15 @@ int main(){
 
     do{
         printf("Escolha o que deseja:\n");
-        printf("1 - AdiÁ„o\n");
-        printf("2 - SubtraÁ„o\n");
-        printf("3 - MultiplicaÁ„o\n");
-        printf("4 - Divis„o\n");
+        printf("1 - Adi√ß√£o\n");
+        printf("2 - Subtra√ß√£o\n");
+        printf("3 - Multiplica√ß√£o\n");
+        printf("4 - Divis√£o\n");
         printf("5 - Extrair raiz quadrada\n");
         printf("6 - Saber porcentagem\n");
         printf("7 - Sair\n");
         scanf("%d", &op);
+        system("cls");
 
         switch(op){
             case 1:
@@ -146,12 +150,12 @@ int main(){
                 Porcentagem();
             break;
             case 7:
-                printf("Obrigado por usar nosso porgrama!\n");
+                printf("Obrigado por usar minha calculadora!\n");
 
                 sair = 'S';
             break;
             default:
-                printf("OpÁ„o inv·lida!\n");
+                printf("Op√ß√£o inv√°lida!\n");
                 system("pause");
                 system("cls");
             break;
