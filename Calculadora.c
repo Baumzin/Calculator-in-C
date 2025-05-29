@@ -1,10 +1,9 @@
-//Breno Valentim Bernardo
-// 21/10/2024
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
 #include <math.h>
+//Breno Valentim Bernardo
+// 21/10/2024
 
 float SomaNumeros(){
     float a, b, soma = 0;
@@ -26,7 +25,7 @@ float SubtraiNumeros(){
     scanf("%f",  &a);
     printf("Digite o segundo numero: ");
     scanf("%f",  &b);
-    printf("Subtração: %f\n", subtracao = a - b);
+    printf("Subtracao: %f\n", subtracao = a - b);
 
     system("pause");
     system("cls");
@@ -40,7 +39,7 @@ float  MultiplicaNumeros(){
     scanf("%f",  &a);
     printf("Digite o segundo numero: ");
     scanf("%f",  &b);
-    printf("Multiplicação: %f\n", multiplicacao = a * b);
+    printf("Multiplicacao: %f\n", multiplicacao = a * b);
 
     system("pause");
     system("cls");
@@ -54,7 +53,7 @@ float DivideNumeros(){
     scanf("%f",  &a);
     printf("Digite o segundo numero: ");
     scanf("%f",  &b);
-    printf("Divisão: %f\n", divisao = a / b);
+    printf("Divisao: %f\n", divisao = a / b);
 
     system("pause");
     system("cls");
@@ -66,7 +65,7 @@ float RaizQuadrada(){
     float a, raiz = 0;
     printf("Digite o numero: ");
     scanf("%f",  &a);
-    printf("Raiz quadrada de %d é: %f\n", a, raiz = sqrt(a));
+    printf("Raiz quadrada de %.2f sera: %.2f\n", a, raiz = sqrt(a));
 
     system("pause");
     system("cls");
@@ -78,15 +77,15 @@ float Porcentagem(){
     float a, porcentagem = 0, valor = 0;
     int op = 0;
 
-    printf("O que quer fazer?\n1 - Saber a porcentagem de algum número\n2 - Saber o valor decimal de uma porcentagem\n");
+    printf("O que quer fazer?\n1 - Saber a porcentagem de algum numero\n2 - Saber o valor decimal de uma porcentagem\n");
     scanf("%d",  &op);
     switch (op){
         case 1:
-            printf("Digite o número: ");
+            printf("Digite o numero: ");
             scanf("%f",  &a);
             printf("Qual a porcentagem? ");
             scanf("%f", &porcentagem);
-            printf("O valor da porcentagem é: %f\n", valor = a * (porcentagem/100));
+            printf("O valor da porcentagem sera: %f\n", valor = a * (porcentagem/100));
             
             system("pause");
             system("cls");
@@ -96,7 +95,7 @@ float Porcentagem(){
         case 2:
             printf("Qual a porcentagem? ");
             scanf("%f", &porcentagem);
-            printf("O valor da porcentagem é: %f\n", valor = porcentagem/100);
+            printf("O valor da porcentagem sera: %f\n", valor = porcentagem/100);
 
             system("pause");
             system("cls");
@@ -104,13 +103,26 @@ float Porcentagem(){
             return valor;
         break;
         default:
-            printf("Opção invalida\n");
+            printf("Opcao invalida\n");
             system("pause");
             system("cls");
 
             return valor;
         break;
     }   
+}
+
+int FatoraNumeros (){
+    int numero = 0, fat = 1;
+
+    printf("Insira o numero que sera fatorado:");
+    scanf("%d", &numero);
+    for(int i = 2; i <= numero; i++){
+        fat *= i;
+    }
+
+    printf("O valor do fatorial de %d sera de: %d\n", numero, fat);
+    return fat;
 }
 
 int main(){
@@ -120,13 +132,14 @@ int main(){
 
     do{
         printf("Escolha o que deseja:\n");
-        printf("1 - Adição\n");
-        printf("2 - Subtração\n");
-        printf("3 - Multiplicação\n");
-        printf("4 - Divisão\n");
+        printf("1 - Adicao\n");
+        printf("2 - Subtracao\n");
+        printf("3 - Multiplicacao\n");
+        printf("4 - Divisao\n");
         printf("5 - Extrair raiz quadrada\n");
         printf("6 - Saber porcentagem\n");
-        printf("7 - Sair\n");
+        printf("7 - Fatoracao de um numero\n");
+        printf("8 - Sair\n");
         scanf("%d", &op);
         system("cls");
 
@@ -150,12 +163,15 @@ int main(){
                 Porcentagem();
             break;
             case 7:
+                FatoraNumeros();
+            break;
+            case 8:
                 printf("Obrigado por usar minha calculadora!\n");
 
                 sair = 'S';
             break;
             default:
-                printf("Opção inválida!\n");
+                printf("Opcao invalida!\n");
                 system("pause");
                 system("cls");
             break;
